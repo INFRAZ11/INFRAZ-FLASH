@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signin&signup</title>
+    <link rel="stylesheet" href="form 1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+</head>
+<body>
+    <div class="container" id="main">
+        <div class="sign-up">
+        <form action="#">
+            <!-- <div class="form11"> -->
+            <h1>Create Account</h1>
+            <div class="social-cntainer">
+                <a href="https://www.facebook.com/" class="social"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/accounts/login/" class="social"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://twitter.com/i/flow/login" class="social"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+              <span>use your email to register</span>
+              <input type="text"  name="text" id="userName" placeholder="Name">
+              
+              <input type="email" name="email"  id="email" placeholder="Email">
+              
+              <input type="password" name="password" id="password" placeholder="Password">
+              
+              <input type="password" name="confirmpassword" id="confirmPassword" placeholder="Confirm Password">
+              
+              <button onclick="signinvalidation()">Sign in</button>
+              
+        </form>
+        </div>
+        <!-- </div> -->
+        <div class="sign-in">
+            <form action="#">
+                <!-- <div class="form11"> -->
+                <h1>Sign in</h1>
+                <div class="social-cntainer">
+                    <a href="https://www.facebook.com/" class="social"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/accounts/login/" class="social"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://twitter.com/i/flow/login" class="social"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+                  <span></span>Use your Account</span>
+                  <input type="email" name="email"  id="email1" placeholder="Email">
+                  
+                
+                  <input type="password" name="password" maxlength="16" minlength="8" id="password1" placeholder="Password">
+            
+                  
+                  <button onclick="signupvalidation()">Sign up</button>
+                
+                  </div>
+            </form>
+        <!-- </div> -->
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-left">
+                    <h1>E-TAIL SX <span></span>
+                    </h1>
+                    <p><b>Welcome To E-TAIL SX<br><br>(MEGA OFFERS FOR ALL BUY2 & GET 2 OFFERS)</b></p>
+                    <button id="SignIn">Sign In</button>
+                </div>
+                <div class="overlay-right">
+                    <h1>E-TAIL SX</h1>
+                    <p><b>Welcome all...<br>(MEGA OFFERS FOR ALL BUY2 & GET 2 OFFERS)</b></p>
+                    <button id="SignUp">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+     <script> 
+
+const signUpButton = document.getElementById("SignUp");
+const signInButton = document.getElementById("SignIn");
+const main = document.getElementById("main");
+
+
+signUpButton.addEventListener('click',()=>{
+    main.classList.add("right-panel-active");
+})
+
+signInButton.addEventListener('click',()=>{
+    main.classList.remove("right-panel-active");
+})
+
+function signinvalidation(){
+        let name = document.getElementById("userName").value;
+        let email = document.getElementById("email").value;
+        let pswd = document.getElementById("password").value;
+        let confirmpswd = document.getElementById("confirmPassword").value;
+
+            if(name.length == 0){
+                alert("Fill the name")
+            }
+            if(email.length == 0){
+                alert("Fill the email")
+            }
+
+            if(pswd.length == 0){
+                alert("Fill the password")
+            }
+        
+            if(confirmpswd.length == 0){
+                alert(" Fill the confirm password")
+            }
+        }
+
+        function signupvalidation(){
+            let email1 = document.getElementById("email1").value;
+            let pswd1= document.getElementById("password1").value;
+
+            if(email1.length == 0 ||(!email1.includes("."))){
+                alert("Enter the correct email ")
+            }
+
+            if(pswd1.length == 0){
+                alert(" Enter the correct password")
+            }
+        }
+     </script> 
+</body>
+</html>

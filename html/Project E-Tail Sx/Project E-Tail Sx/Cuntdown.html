@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CountDownDate</title>
+    <link rel="stylesheet" href="Cuntdown.css">
+</head>
+<body>
+    <div class="timer"></div>
+    <img id="img" src="./image2/e_tail-sx-removebg-preview.png" width="300px" length="200px"   alt="logo">
+    <h1><span>E TAIL-SX OPENING SOON</span><br>WELCOMING ALL</h1>
+    <marquee width="100%" behaviour="alternative" direction="left" scrollamount="10" scrolldelay="10" > 
+        <h2 id="h3"><i>MEGA OFFER ON OPENING DAY CUNTDOWN STARTS</i></h2> </marquee>
+    <div class="clock">
+    <div class="box">
+        <h2 id="days">00</h2>
+        <h4>Days</h4> 
+     </div>
+     <div class="box">
+       <h2 id="hours">00</h2>
+       <h4>Hours</h4> 
+    </div>
+    <div class="box">
+        <h2 id="minutes">00</h2>
+        <h4>Minutes</h4> 
+     </div>
+     <div class="box">
+        <h2 id="seconds">00</h2>
+        <h4>Seconds</h4> 
+     </div>
+    </div>
+    <script  type="text/javascript">
+       var countDownDate = new Date("Aug 05,2022 00:00:00").getTime();
+
+       var x = setInterval(function(){
+        var now = new Date().getTime();
+        var distance =countDownDate-now;
+      
+        var days = Math.floor(distance/
+        (1000 * 60 * 60 * 24));
+
+        var hours = Math.floor(distance%
+        (1000 * 60 * 60 * 24)/(1000 * 60 * 60));
+ 
+        var minutes = Math.floor(distance %
+        (1000 * 60 * 60)/(1000 * 60));
+
+        var seconds = Math.floor(distance %
+        (1000 * 60)/(1000));
+
+        document.getElementById('days').innerHTML= days;
+        document.getElementById('hours').innerHTML= hours;
+        document.getElementById('minutes').innerHTML= minutes;
+        document.getElementById('seconds').innerHTML= seconds;
+    },1000); 
+    </script>
+</body>
+</html>

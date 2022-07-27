@@ -1,0 +1,50 @@
+<html>
+    <head>
+     <link rel="stylesheet" href="E-tail sx.css">
+
+    </head>
+        <body>
+           
+        <div class="container">
+                
+        <div class="path"><img class="logo" src="./image2/e_tail-sx-removebg-preview.png" alt=""></div>
+            <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="./Image slide.html">Shop</a></li>
+            <li><a href="Data tables.html">Services</a></li>
+            <li><a href="Cuntdown.html">About Us</a></li>
+            <li><a href="./form 1.html">Sign In & Up</a></li>
+            </ul>
+        <div class="thumbnail">
+             <li><img src="./image2/Mens-Fashion-Trends-1024x576.webp"
+                onclick="big('./image2/Mens-Fashion-Trends-1024x576.webp');path('#e5e5e5');bg('black')"></li>
+             <li><img src="./image2/maxresdefault.jpg"
+              onclick="big('./image2/maxresdefault.jpg');path('white');bg('rgba(253, 0, 0, 0.878)')"></li>
+             <li><img src="image2/types-of-fashion-styles-for-men-may072021_1.webp"
+             onclick="big('image2/types-of-fashion-styles-for-men-may072021_1.webp');path('rgba(28,211,211)');bg('#e5e5e5')"></li>
+            </div>
+            <div class="big-img">
+                <img src="./image2/maxresdefault.jpg"  class="big" alt="">
+            </div>
+            <div class="content">
+                <p> E-TAIL SX</p><br>
+                <h1>WELCOME FOR BIG OFFER</h1><br>
+                <h5>&#x1F525;BRANDED COLLECTION ONLY <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x1F525;(BUY 2 & GET 2 OFFER)<br>&#x1F525;OFFER TIMING (05-07-22 TO 05-08-22)</h5>
+            </div>
+            </div>
+            
+        </body>
+        <script>
+            function big(img){
+                document.querySelector('.big').src=img;
+            }
+            function path(color){
+                const path=document.querySelector('.path');
+                path.style.bacground = color;
+            }
+            function bg(bacground){
+                const bg=document.querySelector('.container');
+                bg.style.bacground = bacground;
+            }
+        </script>
+</html>
